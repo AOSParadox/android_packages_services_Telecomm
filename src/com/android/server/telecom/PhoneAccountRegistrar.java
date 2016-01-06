@@ -233,7 +233,7 @@ public class PhoneAccountRegistrar {
                 .get(userHandle);
         if (defaultPhoneAccountHandle == null) {
             if (TelephonyManager.getDefault().getPhoneCount() > 1 &&
-                       mSubscriptionManager.getActiveSubscriptionInfoCount() == 1) {
+                       getAllPhoneAccounts(userHandle).size() == 1) {
                 return getUserSelectedVoicePhoneAccount();
             }
             return null;
