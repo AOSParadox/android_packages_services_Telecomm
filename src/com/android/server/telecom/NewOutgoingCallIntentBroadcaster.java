@@ -104,7 +104,6 @@ public class NewOutgoingCallIntentBroadcaster {
             try {
                 Log.startSession("NOCBIR.oR");
                 Trace.beginSection("onReceiveNewOutgoingCallBroadcast");
-<<<<<<< HEAD
                 synchronized (mLock) {
                     Log.v(this, "onReceive: %s", intent);
 
